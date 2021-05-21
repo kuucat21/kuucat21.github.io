@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+    <style>
+        h1 {
+            color: chartreuse;
+        }
+        body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(140deg, 
+      #00f3ffA0, 
+      #0028b960 40%, 
+      #00f3ff60 60%, 
+      #00f3ffA0), 
+    url(https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG4kDlpw3LH19dbtEusTez_llczHCqy84M0LzNV9FmCvwobqarR7bp0J_nOIMUeTrljMxpNEOnM3fkjPjTbQrjsqwFC8o3ov6TkgPaAAwitkl1u1aLR31We2UAGU7pvm_XeAaF1gDuyuawuCOFOqsYHyYDibOd7W0op46evGKJY36/10626614i?errorImage=false);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  animation: move 20s infinite both;
+}
+
+@keyframes move{
+  0% {
+    background-size:100% auto;
+  }
+  50% {
+    background-size:140% auto;
+  }
+  100% {
+    background-size:100% auto;
+  }
+}
+    </style>
+</head>
+<body>
+    <h1>おみくじ</h1>
+    <button id="btn">おみくじスタート</button>
+    <div id="disp"></div>
+    <script>
+        var omikuji_items = ["大吉","中吉","小吉","凶"];
+        var btn = document.getElementById("btn");
+        var disp = document.getElementById("disp");
+        var num = 0;
+
+        btn.addEventListener("click",function(){
+        var num =  Math.floor(  Math.random()*omikuji_items.length); 
+         disp.innerHTML=omikuji_items[num] ;
+         if(omikuji_items[num] == "大吉"){
+             alert("おめでとう");
+         }else if(omikuji_items[num]=="凶"){
+             alert("ドンマイ");
+         }
+         })
+    </script>
+</body>
+</html>
