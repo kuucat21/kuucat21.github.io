@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+.sky{
+    background: url("/sky.png");
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    background-size: cover;
+}
+
+.daytime{
+    background: url("/daytime.png");
+    height: 360px;
+    width: 500%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+  
+}
+
+.car img{
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+}
+
+@keyframes moving{
+    100%{
+        transform: translateX(-3000px);
+    }
+}
+
+
+
+
+.moving{
+    animation: moving 10s linear infinite;
+}
+
