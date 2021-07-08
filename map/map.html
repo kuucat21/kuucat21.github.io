@@ -9,8 +9,11 @@
 </head>
 <body>
     <p>アルコールを提供しているお店はこちらです。</p>
-    
+    <form action="cgi-bin/example.cgi" method="post">
+        <p>検索したいキーワードを入力してください。</p>
+        <input type="search" name="search" placeholder="キーワードを入力">
+        <input type="submit" name="submit" value="検索">
+      </form>
     <iframe src="https://www.google.com/maps/d/embed?mid=1SDr5lG7mCMEj_-1Q5ZYvVqA9BIa1hkY_" width="640" height="480"></iframe>
 </body>
 </html>
-
